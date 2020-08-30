@@ -14,6 +14,9 @@ public class NewBehaviourScript : MonoBehaviour
 
         // Setting forces
         Vector3 force = new Vector3(10.0f,10.0f,0.0f)*speed;
+
+        // Add forces
+        rb.AddForce(force);
     }
 
     // Update is called once per frame

@@ -10,7 +10,10 @@ public class NewBehaviourScript : MonoBehaviour
     void Start()
     {
         // Get rigid body
-        Rigidbody rb = this.GetComponent<Rigidbody>(); 
+        Rigidbody rb = this.GetComponent<Rigidbody>();
+
+        // Setting forces
+        Vector3 force = new Vector3(10.0f,10.0f,0.0f)*speed;
     }
 
     // Update is called once per frame

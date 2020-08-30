@@ -10,13 +10,9 @@ public class NewBehaviourScript : MonoBehaviour
     void Start()
     {
         // Get rigid body
-        Rigidbody rb = this.GetComponent<Rigidbody>();
-
-        // Setting forces
-        Vector3 force = new Vector3(10.0f,10.0f,0.0f)*speed;
-
-        // Add forces
-        rb.AddForce(force);
+        this.GetComponent<Rigidbody>().AddForce(
+            (transform.forward + transform.right) * speed,
+            ForceMode.VelocityChange);
     }
 
     // Update is called once per frame

@@ -9,7 +9,8 @@ public class NewBehaviourScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        // Get rigid body
+        Rigidbody rb = this.GetComponent<Rigidbody>(); 
     }
 
     // Update is called once per frame

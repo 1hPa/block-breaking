@@ -10,9 +10,9 @@ public class Ball : MonoBehaviour
     void Start()
     {
         // Get rigid body
-        this.GetComponent<Rigidbody>().AddForce(
-            (transform.forward + transform.right) * speed,
-            ForceMode.VelocityChange);
+        rigid = this.GetComponent<Rigidbody>();
+        rigid.AddForce((transform.forward + transform.right) * speed,
+                ForceMode.VelocityChange);
     }
 
     // Update is called once per frame
